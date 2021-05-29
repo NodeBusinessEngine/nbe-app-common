@@ -22,7 +22,7 @@ export function GetNBEBaseServer(expressBase: any, routes: any[] = [], customMid
   // Add the Custome Routes
   if (routes.length > 0) {
     for (const route of routes) {
-      const {baseUrl = '', handler = undefined} = route;
+      const {baseUrl = '', handler} = route;
       if(baseUrl && handler) app.use(baseUrl, handler)
     }
   }
