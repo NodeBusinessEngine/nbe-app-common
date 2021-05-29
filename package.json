@@ -1,0 +1,50 @@
+{
+  "name": "@nbe/nbe-app-common",
+  "version": "1.0.0",
+  "description": "Common Classes and Methods used with Microservices",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint && npm run format",
+    "version": "npm test && git add -A src",
+    "postversion": "git push && git push --tags",
+    "bumpversion": "npm version patch && npm publish"
+  },
+  "homepage": "https://github.com/NodeBusinessEngine/nbe-app-common.git/#readme",
+  "bugs": {
+    "url": "https://github.com/NodeBusinessEngine/nbe-app-common.git/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeBusinessEngine/nbe-app-common.git.git"
+  },
+  "keywords": [
+    "Typescript",
+    "Node",
+    "Library",
+    "Boilerplate"
+  ],
+  "author": "Suren Rodrigo",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "jest": "^27.0.1",
+    "prettier": "^2.3.0",
+    "ts-jest": "^27.0.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.3.2"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "publishConfig": {
+    "registry": "http://localhost:8081/repository/nbe-repo-hosted/"
+  }
+}
