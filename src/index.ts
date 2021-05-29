@@ -16,14 +16,14 @@ export function GetNBEBaseServer(expressBase: any, routes: any[] = [], customMid
   // NB: Add Logger (Morgan) and Authentication as Custom Middleware
   if (customMiddleware.length > 0) {
     for (const middleWare of customMiddleware) {
-      app.use(middleWare)
+      app.use(middleWare);
     }
   }
   // Add the Custome Routes
   if (routes.length > 0) {
     for (const route of routes) {
-      const {baseUrl = '', handler} = route;
-      if(baseUrl && handler) app.use(baseUrl, handler)
+      const { baseUrl = '', handler } = route;
+      if (baseUrl && handler) app.use(baseUrl, handler);
     }
   }
   app.use(errorHandler);

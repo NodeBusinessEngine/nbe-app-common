@@ -1,6 +1,6 @@
 {
   "name": "@nbe/nbe-app-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common Classes and Methods used with Microservices",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
